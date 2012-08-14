@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TabHost
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+		<LinearLayout android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:background="@drawable/bottom_bg"
+                android:paddingTop="2dip" 
+                android:paddingBottom="2dip">
+
+            <RadioGroup
+                android:id="@+id/main_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="44dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" 
+                >
+                
+			
+                <RadioButton
+                    android:id="@+id/radio_button0"
+                    android:layout_height="fill_parent"
+                    style="@style/scoreupdate"
+                    android:drawableTop="@null"
+                    android:tag="radio_button0"
+                    android:gravity="bottom" 
+                    android:layout_marginLeft="@dimen/tab_margin"/>
+             
+                <RadioButton
+                    android:id="@+id/radio_button1"
+                    android:layout_height="fill_parent"
+                    style="@style/realscore"
+                    android:drawableTop="@null"
+                    android:tag="radio_button1"
+                    android:layout_marginLeft="@dimen/tab_margin"/>
+             
+                <RadioButton
+                    android:id="@+id/radio_button2"
+                    android:layout_height="fill_parent"
+                    style="@style/realindex"
+                    android:drawableTop="@null"
+                    android:tag="radio_button2"                    
+                    android:layout_marginLeft="@dimen/tab_margin"
+                     />
+             
+                <RadioButton
+                    android:id="@+id/radio_button3"
+                    android:layout_height="fill_parent"
+                    style="@style/repository"
+                    android:drawableTop="@null"
+                    android:tag="radio_button3" 
+                    android:layout_marginLeft="@dimen/tab_margin"
+                    
+                    />
+              
+
+	  		
+                <RadioButton
+                    android:id="@+id/radio_button4"
+                    android:layout_height="fill_parent"
+                    style="@style/more"
+                    android:drawableTop="@null"
+                    android:tag="radio_button4"
+                    android:layout_marginLeft="@dimen/tab_margin"
+                    />
+
+			
+            </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

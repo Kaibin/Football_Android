@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ScoreActivity!</string>
+    <string name="loading">加载数据中...</string>
+    <string name="app_name">球探体育比分</string>
+    
+    <string name="realtime_match_title">即时比分</string>
+    <string name="Event">事件</string>
+    <string name="Lineup">阵容</string>
+    <string name="Oupei">欧赔</string>
+    <string name="Yapei">亚赔</string>
+    <string name="Overunder">大小</string>
+    <string name="Analysis">分析</string>
+    <string name="matchid">比赛ID</string>
+    <string name="confirm">确认</string>
+    <string name="realindex">即时指数</string>
+    <string name="repository">资料库</string>
+    <string name="scoreupdate"> 比分动态</string>
+    <string name="realscore">即时比分</string>
+    <string name="more">更多</string>
+    <string name="ok">确定</string>
+    <string name="cancl">取消</string>
+    <string name="confirmExit">确定要退出球探体育比分吗？</string>
+	
+    <string name="score_filter_type_prompt">请选择赛事比分类型</string>
+    <string name="score_sort_type_prompt">页面赛事排序选择</string>
+    <string name="recommend_filter_type_prompt">请选择推荐给好友方式</string>
+    <string name="setlanguage_filter_type_prompt">语言设置</string>
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_cancel">取消</string>
+    
+    <string name="repository_match_type_prompt">请选择赛事类别</string>
+    <string name="repository_cup_season_prompt">赛季选择</string>
+    
+    <string name="pull_to_refresh_pull_label">下拉可以刷新...</string>
+    <string name="pull_to_refresh_release_label">松开即可刷新...</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="pull_to_refresh_tap_label">下拉刷新...</string>
+    
+    <string name="score_type_first">一级</string>
+    <string name="score_type_all">全部</string>
+    <string name="score_type_danchang">单场</string>
+    <string name="score_type_zucai">足彩</string>
+    <string name="score_type_jingcai">竞彩</string>
+    
+    <string name="follow_success">关注赛事成功</string>
+    <string name="unfollow_success">取消关注赛事成功</string>
+    
+
+</resources>

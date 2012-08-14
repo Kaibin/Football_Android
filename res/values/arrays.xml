@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 	<string-array name="recommend_filter_types">
+    	<item>通过短信</item>
+		<item>通过邮件</item>
+    </string-array>
+
+    <string-array name="match_filter_types">
+    	<item>一级赛事</item>
+		<item>全部赛事</item>
+		<item>足彩赛事</item>
+		<item>竞彩赛事</item>
+		<item>单场赛事</item>
+    </string-array>
+    
+    <string-array name="match_sort_types">
+    	<item>按赛事时间排序</item>
+		<item>按赛事类型排序</item>
+    </string-array>
+    
+    <string-array name="setlanguage_filter_types">
+    	<item>简体</item>
+		<item>繁体</item>
+		<item>皇冠</item>
+    </string-array>
+    
+    <string-array name="league_level_filter_types">
+    	<item>全部</item>
+		<item>一级</item>
+    </string-array>
+    
+    
+</resources>

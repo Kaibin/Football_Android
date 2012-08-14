@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="47dip"
+  android:background="@drawable/ls_bg">	
+
+							
+	<Button android:id="@+id/su_delete_button"
+			android:background="@drawable/ls_del" 
+			android:layout_alignParentLeft="true"
+			android:layout_width="22dip"
+			android:layout_height="22dip" 
+			android:layout_marginLeft="4dip"
+			android:layout_marginRight="4dip"
+			android:textColor="@color/white"
+			android:textSize="12sp" 
+			android:layout_centerVertical="true"
+			android:focusable="false"
+			android:focusableInTouchMode="false" />
+			
+	<ImageView android:src="@drawable/ls_ball"
+			android:id="@+id/su_type_image"
+			android:layout_width="21dip" 
+			android:layout_height="21dip"
+			android:layout_marginLeft="5dip"
+			android:layout_marginRight="5dip"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/su_delete_button" />			
+	
+	<RelativeLayout android:id="@+id/su_layout_league_time"
+		android:layout_width="45dip" 
+		android:layout_height="fill_parent"		
+		android:layout_toRightOf="@+id/su_type_image"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="1dip"
+		> 					
+		
+	<TextView android:id="@+id/su_league_name"
+		android:layout_width="wrap_content" 
+		android:layout_height="23dip"		
+		android:layout_alignParentTop="true"
+		android:gravity="center_vertical"
+		android:layout_centerHorizontal="true"
+		android:text="西甲"
+		android:singleLine="true"
+		android:textSize="11sp" />
+	
+	<TextView android:id="@+id/su_start_time"
+		android:layout_width="wrap_content" 
+		android:layout_height="23dip"		
+		android:layout_marginLeft="2dip"
+		android:layout_below="@+id/su_league_name"
+		android:layout_centerHorizontal="true"
+		android:gravity="center_vertical"
+		android:text="19:00"
+		android:textSize="10sp" 
+		android:textColor="@color/start_time" />
+	
+	</RelativeLayout>
+	
+	<TextView
+        android:id="@+id/su_match_minutes"
+        android:layout_width="30dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/su_layout_league_time"
+        android:layout_centerVertical="true"
+        android:text="53'"
+        android:textColor="@color/ongoing_status_color"
+        android:textSize="10sp" 
+        android:singleLine="true"
+		android:layout_marginLeft="1dip"
+		android:layout_marginRight="1dip"
+        />
+	
+	<RelativeLayout android:id="@+id/su_layout_team_name"
+		android:layout_width="wrap_content" 
+		android:layout_height="fill_parent"		
+		android:layout_toRightOf="@+id/su_match_minutes"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="1dip"
+		android:layout_marginRight="3dip"
+		> 					
+	
+	<TextView android:id="@+id/su_hometeam_name"
+		android:layout_width="wrap_content" 
+		android:layout_height="23dip"		
+		android:layout_alignParentTop="true"
+		android:gravity="center_vertical"
+		android:maxWidth="100dip"
+		android:singleLine="true"
+		android:text="莫斯科斯巴达克"
+		android:textSize="13sp"
+		android:textStyle="bold"	
+		android:textColor="@color/team_name" />
+<!-- 
+		android:shadowColor="@color/team_name"
+   		android:shadowDx="0.2"
+   		android:shadowDy="0.0"
+   		android:shadowRadius="0.2"
+ -->   				
+					
+	<TextView android:id="@+id/su_awayteam_name"
+		android:layout_width="wrap_content" 
+		android:layout_height="23dip"		
+		android:layout_below="@+id/su_hometeam_name"
+		android:gravity="center_vertical"
+		android:maxWidth="100dip"
+		android:singleLine="true"
+		android:text="莫斯科斯巴达克"
+		android:textSize="13sp"
+		android:textStyle="bold"	
+		android:textColor="@color/team_name" />
+		<!-- 
+		android:shadowColor="@color/team_name"
+   		android:shadowDx="0.2"
+   		android:shadowDy="0.0"
+   		android:shadowRadius="0.2"
+   		 -->		
+
+	</RelativeLayout>
+	
+	<RelativeLayout android:id="@+id/su_layout_which"
+		android:layout_width="38dip" 
+		android:layout_height="fill_parent"		
+		android:layout_toLeftOf="@+id/su_layout_data"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="5dip"
+		android:orientation="vertical"
+		> 					
+	
+	<TextView android:id="@+id/su_from_hometeam"
+		android:background="@drawable/ls_img1"
+		android:layout_width="38dip" 
+		android:layout_height="15dip"		
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginTop="4dip"
+		android:layout_marginBottom="4dip"
+		android:paddingLeft="8dip"
+		android:maxWidth="100dip"
+		android:singleLine="true"
+		android:gravity="center_vertical"
+		android:text="进球"
+		android:textSize="10sp"
+		android:textStyle="bold"		
+		android:textColor="@drawable/white" 
+		/>
+					
+	<TextView android:id="@+id/su_from_awayteam"
+		android:background="@drawable/ls_img2"
+		android:layout_width="38dip" 
+		android:layout_height="15dip"			
+		android:layout_marginTop="4dip"
+		android:layout_marginBottom="4dip"
+		android:layout_below="@+id/su_from_hometeam"
+		android:paddingLeft="8dip"
+		android:maxWidth="100dip"
+		android:singleLine="true"
+		android:text="红牌"
+		android:gravity="center_vertical"
+		android:textSize="10sp"
+		android:textStyle="bold"		
+		android:textColor="@drawable/white" />
+
+	</RelativeLayout>
+	
+	<RelativeLayout android:id="@+id/su_layout_data"
+		android:layout_width="wrap_content" 
+		android:layout_height="fill_parent"		
+		android:layout_alignParentRight="true"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="10dip"
+		> 					
+	
+	<TextView android:id="@+id/su_data_name"
+		android:layout_width="wrap_content" 
+		android:layout_height="23dip"		
+		android:layout_alignParentTop="true"
+		android:gravity="center_vertical"
+		android:layout_centerHorizontal="true"
+		android:singleLine="true"
+		android:text="比数"
+		android:textSize="13sp"
+		android:textStyle="bold"		
+		android:textColor="@color/team_name" />
+					
+	<TextView android:id="@+id/su_data_value"
+		android:layout_width="wrap_content" 
+		android:layout_height="23dip"		
+		android:layout_below="@+id/su_data_name"
+		android:gravity="center_vertical"
+		android:layout_centerHorizontal="true"
+		android:singleLine="true"
+		android:text="3:2"
+		android:textSize="13sp"
+		android:textStyle="bold"		
+		android:textColor="@color/score_value_color" />
+
+	</RelativeLayout>
+
+       
+			
+</RelativeLayout>

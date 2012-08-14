@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/odds_title_row"
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:layout_gravity="top"
+        android:background="@color/odds_title_bg_color"
+        android:orientation="horizontal" >
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/odds_title_bg_color"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="51dip"
+                android:layout_height="25dip"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="公司"
+                android:textColor="@color/odds_item_chupan_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="269dip"
+            android:layout_height="25dip"
+            android:layout_gravity="top"
+            android:background="@color/odds_title_bg_color"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text=""
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/homeColumn"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="上盘"
+                android:textColor="@color/odds_title_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/middleColumn"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="盘口"
+                android:textColor="@color/odds_title_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/awayColumn"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="下盘"
+                android:textColor="@color/odds_title_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/odds_title_bg_color"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/companyName"
+                android:layout_width="51dip"
+                android:layout_height="50.5dip"
+                android:background="@drawable/setbar_bg"
+                android:gravity="center"
+                android:text="澳彩"
+                android:textColor="@color/odds_item_chupan_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="269dip"
+            android:layout_height="50.5dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dip"
+                android:layout_gravity="top"
+                android:background="@color/odds_item_chupan_bg_color"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/setbar_bg"
+                    android:gravity="center"
+                    android:text="初盘"
+                    android:textColor="@color/odds_item_chupan_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/homeTeamChupan"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/setbar_bg"
+                    android:gravity="center"
+                    android:text="0.64"
+                    android:textColor="@color/odds_item_chupan_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/chupan"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/setbar_bg"
+                    android:gravity="center"
+                    android:text="半球"
+                    android:textColor="@color/odds_item_chupan_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/awayTeamChupan"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/setbar_bg"
+                    android:gravity="center"
+                    android:text="0.99"
+                    android:textColor="@color/odds_item_chupan_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dip"
+                android:layout_gravity="top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/setbar_bg"
+                    android:gravity="center"
+                    android:text="即时"
+                    android:textColor="@color/odds_item_instant_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/homeTeamOdds"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/setbar_bg"
+                    android:gravity="center"
+                    android:text="0.64"
+                    android:textColor="@color/odds_item_chupan_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/instantOdds"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/setbar_bg"
+                    android:gravity="center"
+                    android:text="半球"
+                    android:textColor="@color/odds_item_chupan_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/awayTeamOdds"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/setbar_bg"
+                    android:gravity="center"
+                    android:text="0.99"
+                    android:textColor="@color/odds_item_chupan_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

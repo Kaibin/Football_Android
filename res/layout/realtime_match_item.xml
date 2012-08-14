@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="47dip"
+  android:background="@drawable/realtime_match_line_background">	
+
+	<Button android:id="@+id/follow_star_button"
+			android:background="@drawable/follow_button" 
+			android:layout_alignParentLeft="true"
+			android:layout_width="45dip"
+			android:layout_height="45dip" 
+			android:textColor="@color/white"
+			android:textSize="12sp" 
+			android:layout_centerVertical="true"
+			android:focusable="false"
+			android:focusableInTouchMode="false" 
+			android:layout_marginLeft="3dip"/>
+
+	<TextView android:id="@+id/match_league_name"
+		android:layout_width="wrap_content" 
+		android:layout_height="20dip"		
+		android:layout_toLeftOf="@+id/match_start_time"
+		android:layout_alignParentTop="true"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="5dip"
+		android:text="友谊赛"
+		android:textSize="12sp" />
+
+	
+		<TextView android:id="@+id/match_start_time"
+		android:layout_width="wrap_content" 
+		android:layout_height="20dip"		
+		android:layout_toLeftOf="@+id/match_status"
+		android:layout_marginLeft="2dip"
+		android:layout_alignParentTop="true"
+		android:gravity="center_vertical"
+		android:text="19:00"
+		android:textSize="10sp" 
+		android:textColor="@color/start_time" />
+	
+	<TextView android:background="@drawable/yellowcard"
+		android:id="@+id/home_yellow"
+		android:layout_width="13dip" 
+		android:layout_height="15dip"
+		android:layout_marginTop="4dip"
+		android:layout_marginRight="2dip"
+		android:layout_below="@+id/match_start_time"
+		android:layout_toLeftOf="@+id/home_red" 
+		android:text="1"
+		android:gravity="center"
+		android:textColor="@color/yellowcard_color"
+		android:textSize="10sp" />
+	
+	<TextView android:background="@drawable/redcard"
+		android:id="@+id/home_red"
+		android:layout_width="13dip" 
+		android:layout_height="15dip"
+		android:layout_marginTop="4dip"
+		android:layout_marginRight="2dip"
+		android:layout_below="@+id/match_start_time"
+		android:layout_toLeftOf="@+id/hometeam_name" 
+		android:text="1"
+		android:gravity="center"
+		android:textColor="@color/white"
+		android:textSize="10sp" />
+	
+	
+	<TextView android:id="@+id/hometeam_name"
+		android:layout_width="wrap_content" 
+		android:layout_height="23dip"		
+		android:layout_toLeftOf="@+id/match_status"
+		android:layout_below="@+id/match_start_time"
+		android:layout_marginBottom="3dip"
+		android:gravity="center_vertical"
+		android:maxWidth="100dip"
+		android:singleLine="true"
+		android:text="莫斯科斯巴达克"
+		android:textSize="14sp" 
+		android:textStyle="bold"
+		android:textColor="@color/team_name" />
+<!-- 	android:shadowColor="@color/team_name"
+   		android:shadowDx="0.2"
+   		android:shadowDy="0.0"
+   		android:shadowRadius="0.2"  -->		
+				
+	<TextView
+            android:id="@+id/match_status"
+            android:layout_width="35dip"
+            android:layout_height="20dip"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="未开"
+            android:textSize="10sp" />
+
+	<TextView
+            android:id="@+id/match_status_only"
+            android:layout_width="35dip"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
+            android:text="未开"
+            android:textSize="10sp" />
+
+    <TextView
+            android:id="@+id/match_score"
+            android:layout_width="37dip"
+            android:layout_height="23dip"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/match_status"
+			android:layout_marginBottom="3dip"           
+			android:gravity="center"
+            android:text="10:11"
+            android:textSize="15sp"
+			android:textStyle="bold"            
+            android:textColor="@color/ongoing_score_color" />	
+		
+	<TextView android:id="@+id/awayteam_name"
+		android:layout_width="wrap_content" 
+		android:layout_height="23dip"		
+		android:layout_toRightOf="@+id/match_status"
+		android:layout_below="@+id/match_chupan"
+		android:layout_marginBottom="3dip"
+		android:gravity="center_vertical"
+		android:maxWidth="100dip"
+		android:singleLine="true"
+		android:text="莫斯科斯巴达克2"
+		android:textSize="14sp" 
+		android:textStyle="bold"
+		android:textColor="@color/team_name"/>
+<!--  	android:shadowColor="@color/team_name"
+   		android:shadowDx="0.2"
+   		android:shadowDy="0.0"
+   		android:shadowRadius="0.2" -->	
+		
+	<TextView android:background="@drawable/redcard"
+		android:id="@+id/away_red"
+		android:layout_width="13dip" 
+		android:layout_height="15dip"
+		android:layout_marginTop="4dip"
+		android:layout_marginRight="2dip"
+		android:layout_below="@+id/match_chupan"
+		android:layout_toRightOf="@+id/awayteam_name" 
+		android:text="1"
+		android:gravity="center"
+		android:textColor="@color/white"
+		android:textSize="10sp" />		
+
+	<TextView android:background="@drawable/yellowcard"
+		android:id="@+id/away_yellow"
+		android:layout_width="13dip" 
+		android:layout_height="15dip"
+		android:layout_marginTop="4dip"
+		android:layout_marginRight="2dip"
+		android:layout_below="@+id/match_chupan"
+		android:layout_toRightOf="@+id/away_red"
+		android:text="5"
+		android:gravity="center"
+		android:textColor="@color/yellowcard_color"
+		android:textSize="10sp" />
+	
+		
+	<TextView android:id="@+id/match_chupan"
+		android:layout_width="wrap_content" 
+		android:layout_height="20dip"		
+		android:layout_toRightOf="@+id/match_status"
+		android:layout_alignParentTop="true"
+		android:gravity="center_vertical"
+		android:text="半球"
+		android:textSize="10sp"
+		android:textColor="@color/chupan_color" />
+
+	<TextView android:id="@+id/match_half_score"
+		android:layout_width="wrap_content" 
+		android:layout_height="20dip"		
+		android:layout_toLeftOf="@+id/right_accessory"
+		android:layout_marginRight="10dip"
+		android:layout_alignParentTop="true"
+		android:gravity="center_vertical"
+		android:text="(4:3)"
+		android:textSize="10sp" 
+		android:textColor="@color/half_score"/>
+
+	<ImageView android:id="@+id/right_accessory"
+			android:src="@drawable/more" 
+			android:layout_alignParentRight="true"
+			android:layout_width="10dip"
+			android:layout_height="11dip" 
+			android:layout_marginRight="5dip"
+			android:textColor="@color/white"
+			android:layout_centerVertical="true" />    
+			
+</RelativeLayout>

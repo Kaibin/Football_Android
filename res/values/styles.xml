@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+<style name="notitle">
+<item name="android:windowNoTitle">true</item> 
+</style>
+    <style name="scoreupdate">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>  
+        <item name="android:background">@drawable/tab_1</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>  
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    
+    <style name="realscore">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>  
+        <item name="android:background">@drawable/tab_2</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>  
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    
+    <style name="realindex">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>  
+        <item name="android:background">@drawable/tab_3</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>  
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    
+    <style name="repository">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>  
+        <item name="android:background">@drawable/tab_4</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>  
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    
+    <style name="more">
+        <item name="android:textSize">12dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>  
+        <item name="android:background">@drawable/tab_5</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>  
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    
+    
+    <style name="PreferenceCategoryHeader" >
+    	<item name="android:layout_height">30dip</item>
+    	<item name="android:layout_width">fill_parent</item>
+    	<item name="android:textColor">#ff30628f</item>
+   		<item name="android:textStyle">bold</item>
+    	<item name="android:textSize">13sp</item>
+    	<item name="android:background">@drawable/more_pref_category</item>
+    	<item name="android:paddingTop">5dip</item>
+    	<item name="android:paddingLeft">10dip</item>
+	</style>
+	
+	<style name="Theme.More.Pref" parent="@android:style/Theme">
+    	<item name="android:listSeparatorTextViewStyle">@style/PreferenceCategoryHeader</item> 
+    	<item name="android:windowNoTitle">true</item>
+	</style>
+    
+</resources> 

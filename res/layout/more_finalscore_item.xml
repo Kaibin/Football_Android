@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/more_finalScore_RL"
+	android:layout_width="fill_parent"
+	android:layout_height="@dimen/more_item_height"
+	android:background="@color/white">
+	
+	<TextView android:textSize="11sp" 
+		android:textStyle="bold"
+		android:id="@+id/finalScore_leagueName" 
+		android:layout_width="55dip"
+		android:layout_height="@dimen/more_item_height"
+		android:text="西甲联赛"
+		android:gravity="center_vertical|left"
+		android:layout_marginLeft="3dip"
+		android:layout_alignParentTop="true" 
+		android:layout_alignParentLeft="true"
+		android:textColor="@color/black"
+		android:singleLine="true"></TextView>
+		
+	<TextView android:textSize="11sp"
+		android:id="@+id/finalScore_date"
+		android:layout_width="25dip" 
+		android:layout_height="@dimen/more_item_height"
+		android:gravity="center" 
+		android:text="31日" 
+		android:layout_marginLeft="5dip"
+		android:layout_marginRight="3dip" 
+		android:layout_toRightOf="@+id/finalScore_leagueName"
+		android:textColor="@color/gray">
+		</TextView>
+
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" 
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/more_item_height"
+		android:layout_alignParentRight="true"
+		android:layout_toRightOf="@+id/finalScore_date">
+
+		<TextView android:textSize="11sp" android:id="@+id/finalScore_hometeamName"
+			android:layout_width="wrap_content" 
+			android:layout_height="@dimen/more_item_height"
+			android:text="索菲亚火车头" 
+			android:gravity="center"
+			android:singleLine="true"
+			android:layout_toLeftOf="@+id/finalScore_score_layout"
+			android:layout_marginRight="3dip"
+			android:textColor="@color/black"></TextView>
+
+		<TextView android:textSize="11sp" 
+			android:id="@+id/finalScore_awayteamName"
+			android:layout_width="wrap_content" 
+			android:layout_height="@dimen/more_item_height"
+			android:text="布里斯班奥林" 
+			android:gravity="center"
+			android:singleLine="true"
+			android:layout_toRightOf="@+id/finalScore_score_layout"
+			android:layout_marginLeft="5dip"
+			android:textColor="@color/black"
+			></TextView>
+			
+		<RelativeLayout android:id="@+id/finalScore_score_layout"
+			android:layout_width="60dip" 
+			android:layout_height="@dimen/more_item_height"
+			android:orientation="horizontal"
+			android:layout_alignParentTop="true"
+			android:layout_centerHorizontal="true">
+			
+			<TextView 
+				android:layout_width="wrap_content" 
+				android:layout_height="@dimen/more_item_height"
+				android:text="1:0(0:0)" 
+				android:gravity="center" 
+				android:textSize="10sp" 
+				android:id="@+id/finalScore_score"
+				android:layout_centerInParent="true"
+				android:textColor="@color/black">
+				</TextView>
+			
+		</RelativeLayout>
+	</RelativeLayout>
+
+</RelativeLayout>

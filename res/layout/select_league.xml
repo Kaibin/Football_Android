@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:background="@color/white"
+	>
+	
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/league_titlebar" android:layout_width="fill_parent"
+		android:background="@drawable/top_live" android:layout_height="44dip"
+		android:layout_marginBottom="10dip">
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_centerInParent="true"
+			android:gravity="center" android:textColor="@color/white"
+			android:textSize="20sp" android:text="赛事筛选" />
+
+	</RelativeLayout>
+
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@+id/league_titlebar" android:scrollbars="vertical"
+		android:layout_above="@+id/league_bottombar" android:layout_marginBottom="10dip"
+		android:id="@+id/league_scrollview"
+		android:background="@drawable/white">
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+			<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/selectLeague_tableLayout" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_span="4">
+			</TableLayout>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/league_bottombar" 
+		android:layout_width="fill_parent"
+		android:layout_height="50dip" 
+		android:layout_alignParentBottom="true" 
+		android:background="@drawable/select_bottom"
+	>
+		
+		<Button android:layout_height="33dip" android:id="@+id/selectLeague_ok" 
+			android:text="确定" 
+			android:layout_width="50dip" 
+			android:layout_alignParentTop="true" 
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="8dip"
+			android:layout_marginRight="3dip"
+			android:layout_marginLeft="3dip"
+			android:textSize="12sp"
+			android:textColor="@drawable/league_bottom_button_text"
+			android:textStyle="bold">
+		</Button>
+		
+		<Button android:layout_height="33dip" 
+			android:id="@+id/selectLeague_noSelect" 
+			android:text="全不选" 
+			android:layout_width="60dip" 
+			android:layout_alignParentTop="true" 
+			android:layout_toLeftOf="@+id/selectLeague_ok"
+			android:layout_marginTop="8dip"
+			android:layout_marginRight="3dip"
+			android:textSize="12sp"
+			android:textColor="@drawable/league_bottom_button_text"
+			android:textStyle="bold">
+		</Button>
+		
+		<Button android:layout_height="33dip" 
+			android:id="@+id/selectLeague_allSelect" 
+			android:text="全选" 
+			android:layout_width="50dip" 
+			android:layout_alignParentTop="true" 
+			android:layout_toLeftOf="@+id/selectLeague_noSelect"
+			android:layout_marginTop="8dip"
+			android:layout_marginRight="3dip"
+			android:textSize="12sp"
+			android:textColor="@drawable/league_bottom_button_text"
+			android:textStyle="bold">
+		</Button>
+		
+		<Button android:layout_height="33dip" 
+			android:id="@+id/selectLeague_topLeague" 
+			android:text="一级" 
+			android:layout_width="50dip" 
+			android:layout_alignParentTop="true" 
+			android:layout_toLeftOf="@+id/selectLeague_allSelect"
+			android:layout_marginTop="8dip"
+			android:layout_marginRight="3dip"
+			android:textSize="12sp"
+			android:textColor="@drawable/league_bottom_button_text"
+			android:textStyle="bold">
+		</Button>
+		
+		<RelativeLayout 
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent" 
+			android:layout_alignParentLeft="true"
+			android:layout_alignBottom="@+id/selectLeague_topLeague"
+			android:layout_alignTop="@+id/selectLeague_topLeague"
+			android:orientation="vertical" 
+			>
+		
+			<TextView 
+				android:id="@+id/textview1"
+				android:layout_height="wrap_content"
+				android:layout_width="fill_parent"
+				android:layout_alignTop="@+id/selectLeague_topLeague"
+				android:layout_marginLeft="10dip"
+				android:gravity="left"
+				android:text="隐藏赛事"
+				android:textSize="10sp"
+				android:textColor="@color/black"
+			/>
+			
+			<RelativeLayout 
+				android:layout_height="wrap_content"
+				android:layout_width="fill_parent"
+				android:layout_below="@+id/textview1"
+				android:orientation="horizontal"
+				android:layout_marginLeft="10dip"
+				android:textColor="@color/black"
+			>
+			
+				<TextView
+					android:id="@+id/textview_hiddenMatch"
+					android:layout_height="wrap_content"
+					android:layout_width="30dip"
+					android:layout_below="@+id/textview1"
+					android:gravity="center"
+					android:text="100"
+					android:textSize="11sp"
+					android:textColor="@color/red"
+				/>
+				
+				<TextView
+					android:id="@+id/textview2"
+					android:layout_height="wrap_content"
+					android:layout_width="10dip"
+					android:text="场"
+					android:layout_marginLeft="30dip"
+					android:textSize="10sp"
+					android:textColor="@color/black"
+				/>
+			
+			
+			</RelativeLayout>
+		
+			
+		
+			
+		
+		</RelativeLayout>
+		
+	
+
+	</RelativeLayout>
+
+</RelativeLayout>

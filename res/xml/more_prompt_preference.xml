@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+                android:key="prompt_setPrompt" android:title="进球提示">
+                <CheckBoxPreference
+                        android:title="声音提示"
+                        android:defaultValue="true"
+                        android:enabled="true" android:summaryOff="关闭铃声提示" android:summaryOn="启用铃声提示" android:key="sound_checkboxPref" android:persistent="true" android:disableDependentsState="true" android:layout="@layout/more_custom_checkbox"/>
+                <CheckBoxPreference
+                        android:title="震动提示"
+                        android:defaultValue="true"
+                        android:summaryOff="关闭震动提示" android:summaryOn="启用震动提示" android:enabled="true" android:key="vibrate_checkboxPref" android:persistent="true" android:layout="@layout/more_custom_checkbox"/>
+        </PreferenceCategory>
+        <PreferenceCategory android:title="比分动态推送">
+                <CheckBoxPreference
+                        android:defaultValue="true" android:enabled="true" android:summaryOff="关闭" android:summaryOn="开启" android:disableDependentsState="false" android:key="push_checkboxPref" android:persistent="true" android:layout="@layout/more_custom_checkbox" android:title="仅推送我关注的赛事"/>
+        </PreferenceCategory>
+        <PreferenceCategory android:title="设置刷新间隔" android:key="refleshTime_PrefCategory">
+            <EditTextPreference android:positiveButtonText="确定" android:summary="10秒" android:negativeButtonText="取消" android:title="刷新时间间隔" android:key="refleshTime_editTextPref" android:persistent="true" android:layout="@layout/more_custom_checkbox"></EditTextPreference>
+        </PreferenceCategory><PreferenceCategory android:title="是否自动锁屏">
+            <CheckBoxPreference android:summaryOff="关闭" android:summaryOn="开启" android:disableDependentsState="true" android:key="autoLock_checkboxPref" android:layout="@layout/more_custom_checkbox" android:defaultValue="true" android:title="是否禁止自动锁屏"></CheckBoxPreference>
+        </PreferenceCategory>
+        
+        
+</PreferenceScreen>

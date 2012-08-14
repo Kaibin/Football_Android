@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/repository_bg_color">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/repository_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="44dip"
+        android:background="@drawable/top_live"
+        android:orientation="horizontal" >
+
+        <!-- <Button
+            android:id="@+id/refresh"
+            android:layout_width="32.5dip"
+            android:layout_height="27.5dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/refresh" />
+ -->
+        <ImageView
+            android:layout_width="118dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/data_logo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:background="@drawable/data_search_bg"
+        android:layout_below="@+id/repository_titlebar"
+        android:layout_gravity="top" >
+
+        <EditText
+            android:id="@+id/txt_search_key"
+            android:layout_width="248dip"
+            android:layout_height="27dip"
+            android:layout_alignBottom="@+id/btn_search"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/btn_search"
+            android:layout_marginLeft="16dp"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:background="@drawable/data_search" 
+            android:paddingLeft="30dip"
+            android:hint="请输入国家名或联赛名称搜索"
+            android:textSize="12sp"
+            android:singleLine="true">
+        </EditText>
+       
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="52dip"
+            android:layout_height="27dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/data_search_btn" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/repository_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_below="@+id/search_layout"
+        android:layout_gravity="top" >
+
+        <Button
+            android:id="@+id/button_internation"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:background="@drawable/repository_menu_button"
+            android:minWidth="50dip"
+            android:text="国际"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button_europe"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:background="@drawable/repository_menu_button"
+            android:minWidth="50dip"
+            android:text="欧洲"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/button_america"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:background="@drawable/repository_menu_button"
+            android:minWidth="50dip"
+            android:text="美洲"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/button_asia"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:background="@drawable/repository_menu_button"
+            android:minWidth="50dip"
+            android:text="亚洲"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/button_africa"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:background="@drawable/repository_menu_button"
+            android:maxWidth="78dip"
+            android:minWidth="50dip"
+            android:text="非洲"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/button_oceania"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="4"
+            android:background="@drawable/repository_menu_button"
+            android:maxWidth="78dip"
+            android:minWidth="50dip"
+            android:text="大洋洲"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" >
+        </Button>
+    </LinearLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/country_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/repository_button_layout"
+        android:layout_marginBottom="10dip"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/selectCountry_tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="4" >
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

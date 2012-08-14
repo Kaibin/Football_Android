@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/white">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/index_titlebar" android:layout_width="fill_parent"
+		android:background="@drawable/top_live" android:layout_height="44dip">
+
+		<ImageView android:src="@drawable/odds_logo"
+			android:layout_width="118dip" android:layout_height="fill_parent"
+			android:layout_alignParentLeft="true" />
+	</RelativeLayout>
+	
+    <TextView
+        android:id="@+id/no_match_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/index_titlebar"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:singleLine="false"
+        android:text="即时指数功能正在开发中，即将发布，敬请期待"
+        android:textColor="@color/team_name"
+        android:textSize="14sp"
+        android:textStyle="bold" >
+    </TextView>
+
+</RelativeLayout>

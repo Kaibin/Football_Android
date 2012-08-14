@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@color/white">
+    
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/score_titlebar" android:layout_width="fill_parent"
+		android:background="@drawable/top_live" android:layout_height="44dip">		
+		
+		<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" 
+            android:layout_marginLeft="10dip"           
+            android:layout_marginRight="10dip"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="比分动态" />
+
+		<Button android:id="@+id/button_edit_score_update" android:text="编辑"
+			android:layout_alignParentRight="true" android:background="@drawable/ss"
+			android:layout_width="48dip" android:layout_height="26dip"
+			android:layout_marginLeft="4dip" android:layout_marginRight="4dip"
+			android:textColor="@drawable/title_bar_button_color" android:textSize="12sp"
+			android:layout_centerVertical="true" />
+
+		<Button android:id="@+id/button_edit_score_clear" android:text="清空"
+			android:background="@drawable/ss"
+			android:layout_toLeftOf="@+id/button_edit_score_done"
+			android:layout_width="48dip" android:layout_height="26dip"
+			android:layout_marginLeft="4dip" android:layout_marginRight="4dip"
+			android:textColor="@color/white" android:textSize="12sp"
+			android:layout_centerVertical="true" />
+
+		<Button android:id="@+id/button_edit_score_done" android:text="完成"
+			android:layout_alignParentRight="true" android:background="@drawable/ss"
+			android:layout_width="48dip" android:layout_height="26dip"
+			android:layout_marginLeft="4dip" android:layout_marginRight="4dip"
+			android:textColor="@color/white" android:textSize="12sp"
+			android:layout_centerVertical="true" />
+
+	</RelativeLayout>	
+	
+	<RelativeLayout android:id="@+id/score_update_current_date_layout"
+		android:layout_width="fill_parent" android:layout_height="38dip"
+		android:layout_gravity="top" android:layout_below="@+id/score_titlebar"	
+		android:background="@drawable/ls_time_bg"	>
+
+			<TextView
+			android:id="@+id/score_update_current_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" 
+            android:layout_marginLeft="10dip"           
+            android:layout_marginRight="10dip"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:text="2012年1月1日 星期一" />
+            
+	</RelativeLayout>
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/score_update_current_date_layout" 
+		android:layout_gravity="top"
+		android:background="@color/white">
+
+		<ListView 
+			android:layout_height="fill_parent" 
+			android:id="@+id/score_update_list_view"
+			android:layout_width="fill_parent"
+			android:dividerHeight="0dip"
+			android:divider="@color/white"
+			android:fadingEdge="none">
+		</ListView>
+		
+		<!-- <ExpandableListView
+            android:id="@+id/score_update_list_view"
+            android:groupIndicator="@drawable/expandicon"
+            android:layout_width="fill_parent"
+            android:cacheColorHint="#00000000"
+			android:fadingEdge="none"
+            android:layout_height="0dip"
+            android:layout_weight="1" /> -->
+		
+	</LinearLayout>
+	
+	<TextView android:id="@+id/no_score_update_view"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"		
+		android:layout_marginTop="10dip"
+		android:gravity="center"
+		android:layout_below="@+id/score_update_current_date_layout"
+		android:singleLine="true"
+		android:text="暂无比分动态"
+		android:textSize="14sp"
+		android:textStyle="bold"		
+		android:textColor="@color/team_name" >
+	</TextView>
+    
+</RelativeLayout>

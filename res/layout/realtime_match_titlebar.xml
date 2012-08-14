@@ -1,0 +1,34 @@
+     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/match_titlebar"
+	    android:layout_width="fill_parent"
+    	android:layout_height="55dip">
+    	
+    	<ImageView android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    	
+    	<TextView android:text="即时比分"
+    		android:layout_width="wrap_content" 
+    		android:layout_height="fill_parent">
+    	</TextView>
+    	
+    	<Button android:id="@+id/button_filter_type"
+    		android:text="全部"
+    		android:layout_toLeftOf="@+id/button_filter_league"
+    		android:layout_width="50dip"
+    		android:layout_height="40dip"
+    	/>
+    	
+    	<Button android:id="@+id/button_filter_league"
+    		android:text="筛选"
+    		android:layout_toLeftOf="@+id/button_sort_type"
+    		android:layout_width="50dip"
+    		android:layout_height="40dip"
+    	/>
+    	
+    	<Button android:id="@+id/button_sort_type"
+    		android:text="排序"
+    		android:layout_alignParentRight="true"
+    		android:layout_width="50dip"
+    		android:layout_height="40dip"
+    	/>
+ 
+	</RelativeLayout>

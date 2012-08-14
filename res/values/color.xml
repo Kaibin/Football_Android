@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<drawable name="white">#FFFFFFFF</drawable>
+	
+	<color name="team_name">#000000</color>
+	<color name="half_score">#4295DF</color>
+	<color name="start_time">#666666</color>
+	<color name="match_time_color">#ff3300</color>
+	<color name="ongoing_status_color">#ff3300</color>
+	<color name="ongoing_score_color">#339900</color>
+	<color name="finish_score_color">#ff0000</color>
+	<color name="chupan_color">#666666</color>
+	
+	<color name="league_color_1">#518ed2</color>
+	<color name="league_color_2">#e8811a</color>
+	<color name="league_color_3">#949720</color>
+	<color name="league_color_4">#8d6dd6</color>
+	<color name="league_color_5">#53ac98</color>	
+	<color name="repository_bg_color">#e3e8ea</color>	
+	<color name="score_value_color">#339900</color>
+	
+	<color name="yellowcard_color">#795200</color>	
+	
+	<color name="pull_to_refresh_text_color">#666666</color>
+	<color name="pull_to_refresh_border_color">#E9EEF7 </color>
+	
+	
+	<color name="live_change_score_text_color">#61180a</color>
+	
+	<color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="gray">#ff888888</color>
+    <color name="lightgray">#ffd3d3d3</color>
+    <color name="lightblue">#ffd4ebf2</color>
+    <color name="more_match_item_color">#ffe8ebec</color>
+    <color name="more_match_item_select">#ff0080ff</color>
+    <color name="more_feedback_bg_color">#ffcccccc</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="more_aboutus_bg">#FF9ED8F5</color>
+    <color name="select_league_button_color">#ff7b2800</color>
+
+	<color name="odds_title_color">#ff5b81b9</color>
+	<color name="odds_title_bg_color">#ffe8ebec</color>
+	<color name="odds_item_chupan_color">#ff333333</color>
+	<color name="odds_item_chupan_bg_color">#fff4f7f7</color>
+    <color name="odds_item_instant_color">#ffcc3300</color>
+    <color name="odds_item_instant_bg_color">#00ffffff</color>
+</resources>

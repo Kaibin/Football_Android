@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.orange.score"
+      android:versionCode="2"
+      android:versionName="1.1">
+    <uses-sdk android:minSdkVersion="7" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 		
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:name="com.orange.score.app.ScoreApplication"
+    	android:launchMode="singleInstance">
+
+	   <service android:enabled="true"
+    			android:name="com.orange.score.android.service.ScoreUpdateService"
+    			android:label="@string/app_name"
+    			>
+    			</service>
+    			    
+	   <service android:enabled="true"
+    			android:name="com.orange.score.android.service.FollowMatchService"
+    			android:label="@string/app_name"
+    			>
+    			</service>
+
+	   <service android:enabled="true"
+    			android:name="com.orange.score.android.service.ScoreService"
+    			android:label="@string/app_name">
+    	</service>
+    			
+    	<service android:exported="true"
+    			android:name="com.exchange.Public.DownloadingService"
+    			android:process=":DownloadingService">
+		</service>
+    
+       <activity
+            android:name="com.orange.score.activity.entry.SplashScreenActivity"
+            android:configChanges="orientation" android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <!-- <action android:name="android.intent.action.VIEW" />-->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" /> 
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.orange.score.activity.entry.MainActivity" 
+                  android:label="@string/app_name" android:configChanges="orientation" android:screenOrientation="portrait">
+            <intent-filter> 
+                <action android:name="android.intent.action.VIEW" />
+                <!-- <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" /> --> 
+            </intent-filter>
+        </activity>
+         
+        <activity
+            android:name=".activity.match.RealtimeMatchDetailActivity"
+            android:configChanges="orientation" android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.orange.score.activity.entry.RepositoryActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name="com.orange.score.activity.entry.ScoreUpdateActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name="com.orange.score.activity.entry.RealtimeMatchActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name=".activity.entry.RealtimeIndexActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name=".activity.entry.RealtimeIndexActivity2" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name="com.orange.score.activity.entry.MoreActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name="com.orange.score.activity.repository.RepositorySelectLeagueActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name="com.orange.score.activity.more.AboutWebsiteActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name="com.orange.score.activity.more.FeedbackActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name="com.orange.score.activity.more.ScorePromptActivity"  android:theme="@style/Theme.More.Pref" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name=".activity.more.WeeklyScheduleActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name=".activity.more.FinalScoreActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name=".activity.league.SelectLeagueActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name=".activity.repository.LeagueScheduleActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name=".activity.repository.CupScheduleActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name=".activity.index.SelectCompanyActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        
+        <meta-data android:value="4f361169527015648900004e" android:name="UMENG_APPKEY"></meta-data>
+                    
+    </application>
+</manifest>

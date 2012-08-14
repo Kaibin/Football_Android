@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/repository_cup_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="44dip"
+        android:background="@drawable/top_live"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txt_cup_season"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:gravity="center"
+            android:text="欧冠2011-2012赛季"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_cup_season"
+            android:layout_width="47.5dip"
+            android:layout_height="27.5dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:text="赛季"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/ss" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cup_select_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_below="@+id/repository_cup_titlebar"
+        android:layout_gravity="top"
+        android:background="@drawable/data_search_bg" >
+
+        <Button
+            android:id="@+id/btn_cup_match_type"
+            android:layout_width="99dip"
+            android:layout_height="37dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bx_g1"
+            android:paddingRight="25dip"
+            android:text="赛事类型"
+            android:textSize="14sp"
+            android:textColor="@drawable/white" />
+
+        <Button
+            android:id="@+id/btn_cup_group_points"
+            android:layout_width="72dip"
+            android:layout_height="27dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/btn_cup_schedule_result"
+            android:background="@drawable/repository_cup_schedule_button"
+            android:textSize="14sp"
+            android:text="小组积分" />
+
+        <Button
+            android:id="@+id/btn_cup_schedule_result"
+            android:layout_width="72dip"
+            android:layout_height="27dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/repository_cup_schedule_button" 
+            android:textSize="14sp"
+            android:text="赛程赛果"/>
+        
+        <TextView
+            android:id="@+id/txt_cup_schedule_result"
+            android:layout_width="wrap_content"
+            android:layout_height="22dip"
+            android:layout_toRightOf="@+id/btn_cup_match_type"
+            android:layout_marginLeft="20dip"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="赛程赛果"
+            android:textSize="14sp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/cup_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

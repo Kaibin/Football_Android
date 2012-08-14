@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Repository</title>
+		<link href="football.css" rel="stylesheet" type="text/css" />
+		<script src="lib/touch/sencha-touch.js" type="text/javascript"></script>
+		<link href="lib/touch/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/util/parserUtil.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/util/NetworkUtil.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/model/JifenObject.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/model/JifenManager.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/view/JifenView.js" charset='utf-8'></script>
+		
+		<script type="text/javascript" src="js/model/ScheduleObject.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/model/ScheduleManager.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/view/ScheduleView.js" charset='utf-8'></script>
+		
+		<script type="text/javascript" src="js/model/RangqiuObject.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/model/RangqiuManager.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/view/RangqiuView.js" charset='utf-8'></script>
+		
+		
+		<script type="text/javascript" src="js/model/DaxiaoObject.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/model/DaxiaoManager.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/view/DaxiaoView.js" charset='utf-8'></script>
+		
+		<script type="text/javascript" src="js/model/ScorerObject.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/model/ScorerManager.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/view/ScorerView.js" charset='utf-8'></script>
+		
+		<script type="text/javascript" src="js/RepositoryVariable.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/repository.js" charset='utf-8'></script>
+		<script type="text/javascript" src="js/test.js" charset='utf-8'></script>
+	</head>
+	
+	<body>
+        
+        <textarea id="noData-template" class="x-hidden-display">
+            <div class="repository-nodata"><span>暂无可查询内容</span></div>
+        </textarea>
+
+        
+		<textarea id="jifen-template" class="x-hidden-display">
+			<div id="data">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr class="data_title">
+				    <td width="31">排名</td>
+				    <td width="118">球队</td>
+				    <td width="22">赛</td>
+				    <td width="22">赢</td>
+				    <td width="22">平</td>
+				    <td width="25">负</td>
+				    <td width="22">得</td>
+				    <td width="22">失</td>
+				    <td width="36">积分</td>
+				</tr>
+				<tpl for="dataArray">
+					<tpl if="xindex % 2 === 0">
+						<tr class="date_td1">
+					</tpl>
+					<tpl if="xindex % 2 !== 0">
+						<tr class="date_td2">
+					</tpl>
+					<td>{rank}</td>
+                    <td>{[getShortString(values.simplifiedTeamName,8)]}</td>
+                    <td>{matches}</td>
+                    <td>{win}</td>
+                    <td>{draw}</td>
+                    <td>{lose}</td>
+                    <td>{goals}</td>
+                    <td>{goalsAgainst}</td>
+                    <td>{points}</td>
+				</tr>
+				</tpl>
+			</table>
+			</div>
+        </textarea>
+        
+        
+        <textarea id="rangqiu-template" class="x-hidden-display">
+			<div id="data">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr class="data_title">
+				     <td width="98">球队</td>				
+				      <td width="28">赛</td>
+				      <td width="26">上</td>
+				      <td width="27">平</td>
+				      <td width="25">下</td>
+				      <td width="27">赢</td>
+				      <td width="27">走</td>
+				      <td width="26">输</td>
+				      <td width="36">净胜</td>
+				</tr>
+				<tpl for="dataArray">
+					<tpl if="xindex % 2 === 0">
+						<tr class="date_td1">
+					</tpl>
+					<tpl if="xindex % 2 !== 0">
+						<tr class="date_td2">
+					</tpl>
+                        <td>{[getShortString(values.simplifiedTeamName,8)]}</td>
+                        <td>{matches}</td>
+                        <td>{up}</td>
+                        <td>{draw}</td>
+                        <td>{down}</td>
+                        <td>{win}</td>
+                        <td>{zou}</td>
+                        <td>{lose}</td>
+                        <td>{scoreEarn}</td>
+                    </tr>
+				</tpl>
+			</table>
+			</div>
+        </textarea>
+       
+        <textarea id="daxiao-template" class="x-hidden-display">
+			<div id="data">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr class="data_title">
+				      <td width="111">球队</td>
+				      <td width="22">赛</td>
+				      <td width="22">大</td>
+				      <td width="22">走</td>
+				      <td width="22">小</td>
+				      <td width="40">大%</td>
+                      <td width="40">走%</td>
+				      <td width="40">小%</td>
+				</tr>
+				<tpl for="dataArray">
+					<tpl if="xindex % 2 === 0">
+						<tr class="date_td1">
+					</tpl>
+					<tpl if="xindex % 2 !== 0">
+						<tr class="date_td2">
+					</tpl>
+					<td>{[getShortString(values.simplifiedTeamName,8)]}</td>
+                    <td>{matches}</td>
+                    <td>{big}</td>
+                    <td>{zou}</td>
+					<td>{small}</td>
+                    <td>{daqiulv}</td>
+                    <td>{zoulv}</td>
+                    <td>{xiaoqiulv}</td>
+				</tr>
+				</tpl>
+			</table>
+			</div>
+        </textarea>
+        
+       	<textarea id="scorer-template" class="x-hidden-display">
+			<div id="data">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr class="data_title">
+			      <td width="110">球员</td>
+			      <td width="90">球队</td>
+			      <td width="40">进球</td>
+			      <td width="40">主进</td>
+			      <td width="40">客进</td>
+				</tr>
+				<tpl for="dataArray">
+					<tpl if="xindex % 2 === 0">
+						<tr class="date_td1">
+					</tpl>
+					<tpl if="xindex % 2 !== 0">
+						<tr class="date_td2">
+					</tpl>
+					<td>{[getShortString(values.simplifiedScorerName,9)]}</td>
+                    <td>{[getShortString(values.simplifiedTeamName,7)]}</td>
+                    <td>{scoreCount}</td>
+                    <td>{homeScoreCount}</td>
+                    <td>{awayScoreCount}</td>
+				</tr>
+				</tpl>
+			</table>
+			</div>
+        </textarea>
+        
+        	<textarea id="schedule-template" class="x-hidden-display">
+			<div id="data">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+			    <tr class="data_title">
+			      <td width="50">时间</td>
+			      <td width="40">&nbsp;</td>
+			      <td width="86">主队</td>
+			      <td width="58">比分</td>
+			      <td width="86">客队</td>
+				</tr>
+				
+				<tpl for="dataArray">
+					<tpl if="xindex % 2 === 0">
+						<tr class="date_td1">
+					</tpl>
+					<tpl if="xindex % 2 !== 0">
+						<tr class="date_td2">
+					</tpl>
+
+                        
+                    <td><span class="data_time2">{[this.scheduleDateString(values.playingTime)]}</span></td>
+                    
+                    <td>
+                        <tpl if="this.statusHilight(state)">		           
+                            <font color="#FF0000">
+                                {[getStatusString(values.state)]}
+                            </font>
+                        </tpl>
+                        <tpl if="!this.statusHilight(state)">	
+                        	   {[getStatusString(values.state)]}
+                        </tpl>
+                    </td>
+                    
+					    <td>{[getShortString(values.simplifiedHomeTeamName,7)]}</td>
+						
+						<tpl if="this.scoreNormal(state)">
+	      					<td>{homeTeamScore}:{awayTeamScore}({homeTeamHalfScore}:{awayTeamHalfScore})
+                            </td> 
+						</tpl>
+						
+                        <tpl if="this.scoreHilight(state)">
+                            <td>
+                                <font color="#FF0000">{homeTeamScore}:{awayTeamScore}
+                                </font>
+                                ({homeTeamHalfScore}:{awayTeamHalfScore})
+                            </td> 
+                        </tpl>
+                    
+						<tpl if="this.scoreVS(state)">
+	      					<td>VS</td> 
+						</tpl>
+	      				
+	      				<td>{[getShortString(values.simplifiedAwayTeamName,7)]}</td>
+					
+					</tr>
+				</tpl>
+			</table>
+			</div>
+        </textarea>
+        
+	</body>
+</html>

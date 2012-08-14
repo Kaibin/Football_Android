@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/repository_cup_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="44dip"
+        android:background="@drawable/top_live"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txt_league_season"
+            android:layout_width="wrap_content"
+            android:layout_height="22dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:gravity="center"
+            android:text="欧冠2011-2012赛季"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_league_season"
+            android:layout_width="47.5dip"
+            android:layout_height="27.5dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/ss"
+            android:text="赛季"
+            android:textSize="12sp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/repository_league_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_below="@+id/search_layout"
+        android:layout_gravity="top" >
+
+        <Button
+            android:id="@+id/btn_league_points"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:background="@drawable/repository_league_schedule_button"
+            android:minWidth="50dip"
+            android:text="积分"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_league_schedule"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:background="@drawable/repository_league_schedule_button"
+            android:minWidth="50dip"
+            android:text="赛程"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/btn_league_rangqiu"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:background="@drawable/repository_league_schedule_button"
+            android:minWidth="50dip"
+            android:text="让球"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/btn_league_daxiao"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:background="@drawable/repository_league_schedule_button"
+            android:maxWidth="78dip"
+            android:minWidth="50dip"
+            android:text="大小"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/btn_league_shooter"
+            android:layout_width="20dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="4"
+            android:background="@drawable/repository_league_schedule_button"
+            android:maxWidth="78dip"
+            android:minWidth="50dip"
+            android:text="射手榜"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" >
+        </Button>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/repository_league_round"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_gravity="top" >
+
+        <Button
+            android:id="@+id/btn_schedule_previous_round"
+            android:layout_width="68dip"
+            android:layout_height="45dip"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/repository_league_schedule_previous_round_button"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_schedule_current_round"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/btn_schedule_next_round"
+            android:layout_toRightOf="@+id/btn_schedule_previous_round"
+            android:background="@drawable/repository_league_schedule_round_button"
+            android:text="第一轮"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" />
+        
+        <ImageView
+            android:layout_width="10dip"
+            android:layout_height="10dip"
+            android:layout_marginRight="50dip"
+            android:layout_marginTop="15dip"
+            android:layout_toLeftOf="@+id/btn_schedule_next_round"
+            android:background="@drawable/arrow" />
+
+        <Button
+            android:id="@+id/btn_schedule_next_round"
+            android:layout_width="68dip"
+            android:layout_height="45dip"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/repository_league_schedule_next_round_button"
+            android:layout_alignParentRight="true"
+            android:textColor="@drawable/button_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/league_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+		android:id="@+id/refresh"
+		android:icon="@drawable/m_1sd"
+		android:title="刷新页面"
+		/>
+	<item
+		android:id="@+id/setting"
+		android:icon="@drawable/m_2sd"
+		android:title="功能设置"
+		/>
+	
+	<item
+		android:id="@+id/feedback"
+		android:icon="@drawable/m_3sd"
+		android:title="意见反馈"
+		/>
+	<item
+		android:id="@+id/exit"
+		android:icon="@drawable/m_4sd"
+		android:title="退出客户端"
+		/>
+
+</menu>

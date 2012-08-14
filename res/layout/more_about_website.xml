@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/more_titlebar" android:layout_width="fill_parent"
+		android:background="@drawable/top_live" android:layout_height="44dip">
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_centerInParent="true"
+			android:gravity="center" android:textColor="@color/white"
+			android:textSize="20sp" android:text="关于球探网" />
+
+	</RelativeLayout>
+	
+	
+	<RelativeLayout
+		android:id="@+id/more_bottom"
+		android:layout_below="@+id/more_titlebar"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="@color/more_aboutus_bg"
+	>
+	
+	<ImageView 
+		android:id="@+id/more_image"
+		android:layout_height="165dip"
+		android:layout_width="fill_parent"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:background="@drawable/more_aboutus"
+	/>
+	
+	<TextView 
+		android:id="@+id/text_version"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:layout_below="@+id/more_image"
+		android:layout_above="@+id/textview3"
+		android:gravity="center"
+		android:text="版本1.0"
+		android:textColor="#006699"
+	/>
+	
+	<TextView android:id="@+id/textview1" 
+		android:layout_height="20dip"
+		android:layout_width="fill_parent" 
+		android:text="版权所有:肇庆市华盈信息科技有限公司"
+		android:textSize="12sp" 
+		android:gravity="center" 
+		android:textColor="@color/black"
+		android:layout_alignParentBottom="true" 
+		android:layout_marginBottom="20dip" />
+		
+	<TextView android:id="@+id/textview2" 
+		android:layout_height="20dip"
+		android:layout_width="fill_parent" 
+		android:text="网站网址:www.titan007.com"
+		android:textSize="12sp" 
+		android:gravity="center" 
+		android:textColor="@color/black"
+		android:layout_above="@+id/textview1"
+	/>
+	
+	<TextView android:id="@+id/textview3" 
+		android:layout_height="20dip"
+		android:layout_width="fill_parent" 
+		android:text="客服电话:0758-2512562"
+		android:textSize="12sp" 
+		android:gravity="center" 
+		android:textColor="@color/black"
+		android:layout_above="@+id/textview2"
+	/>
+	
+	
+	
+	</RelativeLayout>
+
+	
+
+
+</RelativeLayout>

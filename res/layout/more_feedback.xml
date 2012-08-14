@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/more_feedback_bg_color">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/feedback_titlebar" android:layout_width="fill_parent"
+		android:background="@drawable/top_live" android:layout_height="44dip">
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_centerInParent="true"
+			android:gravity="center" android:textColor="@color/white"
+			android:textSize="20sp" android:text="信息反馈" />
+
+	</RelativeLayout>
+
+	<EditText android:id="@+id/feedback_editText1"
+		android:layout_width="fill_parent"
+		android:layout_height="120dip"
+		android:textSize="14dip" 
+		android:layout_below="@+id/feedback_titlebar"
+		android:layout_marginTop="15dip" 
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip" 
+		android:hint="请输入球探网客户端评价" 
+		android:gravity="left"
+		android:paddingLeft="10dip"
+		android:paddingTop="5dip"
+		android:paddingRight="5dip"
+		android:background="@drawable/more_feedback_text"
+	/>
+		
+	<EditText android:id="@+id/feedback_editText2"
+		android:layout_width="200dip" 
+		android:layout_height="40dip"
+		android:layout_alignParentLeft="true" 
+		android:layout_below="@+id/feedback_editText1"
+		android:layout_margin="10dip" 
+		android:hint="联系方式（如手机/QQ/邮箱）"
+		android:paddingLeft="10dip"
+		android:textSize="13dip" 
+		android:singleLine="true"
+		android:background="@drawable/more_feedback_text2"
+	/>
+	
+	<Button android:id="@+id/feedback_button"
+		android:layout_width="wrap_content" 
+		android:layout_height="33dip"
+		android:layout_alignParentRight="true" 
+		android:layout_toRightOf="@+id/feedback_editText2"
+		android:layout_marginTop="13dip"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+		android:layout_marginBottom="10dip"
+		android:layout_below="@+id/feedback_editText1"
+		android:background="@drawable/more_feedback_button"
+		android:text="提交"
+	/>
+	
+	<ImageView 
+		android:layout_width="fill_parent"
+		android:layout_height="3dip"
+		android:layout_below="@+id/feedback_button"
+		android:background="@drawable/more_feedback_line"
+		android:layout_marginTop="10dip"
+	/>
+	
+	<RelativeLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/feedback_editText2"
+		android:layout_margin="10dip"
+	>
+	
+	<TextView 
+		android:id="@+id/textview_4"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_marginTop="20dip"
+		android:text="球探体育比分客户端"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		android:textColor="@color/black"
+	/>
+	
+	<TextView 
+		android:id="@+id/textview_version"
+		android:layout_below="@+id/textview_4"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_marginTop="10dip"
+		android:text="版本号:1.0"
+		android:textSize="11sp"
+		android:textColor="@color/gray"
+	/>
+	
+	<TextView 
+		android:id="@+id/textview3"
+		android:layout_below="@+id/textview_version"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_marginTop="5dip"
+		android:text="联系电话：0758-2512562"
+		android:autoLink="phone"
+		android:textSize="11sp"
+		android:textColor="@color/gray"
+	/>
+	
+	<TextView 
+		android:id="@+id/textview2"
+		android:layout_below="@+id/textview3"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_marginTop="5dip"
+		android:text="版权所有：http://www.titan007.com"
+		android:autoLink="web"
+		android:textSize="11sp"
+		android:textColor="@color/gray"
+	/>
+	
+	<TextView 
+		android:id="@+id/textview1"
+		android:layout_below="@+id/textview2"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="免责声明：仅供体育爱好者参考之用；任何人不得用于非法用途，否则责任自负"
+		android:textColor="@color/gray"
+		android:textSize="10sp"
+		android:layout_marginTop="10dip"
+	/>	
+	
+	</RelativeLayout>
+
+</RelativeLayout>

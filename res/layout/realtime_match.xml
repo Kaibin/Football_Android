@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/white">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/match_titlebar" android:layout_width="fill_parent"
+		android:background="@drawable/top_live" android:layout_height="44dip">
+
+		<ImageView android:src="@drawable/live_logo"
+			android:layout_width="118dip" android:layout_height="fill_parent"
+			android:layout_alignParentLeft="true" />
+
+		<Button android:id="@+id/button_filter_score_type"
+			android:text="全部" android:layout_toLeftOf="@+id/button_filter_league"
+			android:background="@drawable/ss" android:layout_width="48dip"
+			android:layout_height="26dip" android:textColor="@color/white"
+			android:textSize="12sp" android:layout_centerVertical="true" />
+
+	<!-- 	<Button android:id="@+id/button_filter_league" android:text="筛选"
+			android:layout_alignParentRight="true" 
+			android:layout_marginRight="4dip"
+			android:background="@drawable/ss"
+			android:layout_width="48dip" 
+			android:layout_height="26dip"
+			android:layout_marginLeft="4dip" 
+			android:textColor="@color/white"
+			android:textSize="12sp" 
+			android:layout_centerVertical="true" /> -->
+
+		<Button android:id="@+id/button_filter_league" android:text="筛选"
+			android:layout_toLeftOf="@+id/button_sort_type" android:background="@drawable/ss"
+			android:layout_width="48dip" android:layout_height="26dip"
+			android:layout_marginLeft="4dip" android:textColor="@color/white"
+			android:textSize="12sp" android:layout_centerVertical="true" />
+
+		<Button android:id="@+id/button_sort_type" android:text="排序"
+			android:layout_alignParentRight="true" android:background="@drawable/ss"
+			android:layout_width="48dip" android:layout_height="26dip"
+			android:layout_marginLeft="4dip" android:layout_marginRight="4dip"
+			android:textColor="@color/white" android:textSize="12sp"
+			android:layout_centerVertical="true" />
+			
+
+	</RelativeLayout>
+
+
+	<LinearLayout android:id="@+id/button_layout"
+		android:layout_width="fill_parent" android:layout_height="38dip"
+		android:layout_gravity="top" android:layout_below="@+id/match_titlebar"		>
+
+			<Button android:layout_alignParentLeft="true"
+				android:layout_alignParentTop="true" 
+				android:text="全部" 
+				android:id="@+id/button1"
+				android:layout_height="fill_parent"
+				android:layout_width="20dip"
+				android:minWidth="50dip"				
+				android:background="@drawable/realtime_match_status_button"
+				android:textColor="@drawable/button_color"
+				android:textSize="14sp"
+				android:layout_weight="3"/>
+
+			<Button android:text="未开赛" android:id="@+id/button2"
+				android:layout_alignParentTop="true" 
+				android:layout_height="fill_parent"
+				android:layout_width="20dip"
+				android:minWidth="50dip"
+				android:background="@drawable/realtime_match_status_button"
+				android:textColor="@drawable/button_color"
+				android:textSize="14sp"
+				android:layout_weight="3">
+			</Button>
+
+			<Button android:text="进行中" android:layout_alignParentTop="true"
+				android:id="@+id/button3" 
+				android:layout_height="fill_parent" 				
+				android:layout_width="20dip"
+				android:minWidth="50dip"
+				android:background="@drawable/realtime_match_status_button"	
+				android:textColor="@drawable/button_color"
+				android:textSize="14sp"
+				android:layout_weight="3"			
+				></Button>
+
+			<Button android:text="已完场" android:layout_alignParentTop="true"
+				android:id="@+id/button4"
+				android:layout_height="fill_parent"
+				android:layout_width="20dip"				 
+				android:minWidth="50dip"
+				android:background="@drawable/realtime_match_status_button"	
+				android:textColor="@drawable/button_color"
+				android:textSize="14sp"
+				android:layout_weight="3"></Button>
+
+			<Button android:text="我的关注" android:layout_alignParentTop="true"
+				android:id="@+id/button5" 
+				android:layout_height="fill_parent"
+				android:layout_width="64dip"				
+				android:minWidth="50dip"
+				android:maxWidth="78dip"
+				android:background="@drawable/realtime_match_status_button"	
+				android:textColor="@drawable/button_color"
+				android:textSize="14sp"				
+				>
+			</Button>
+	</LinearLayout>
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_below="@+id/button_layout" android:layout_gravity="top">
+
+		<!-- <ListView android:layout_height="wrap_content" android:id="@+id/listView1"
+			android:layout_width="fill_parent"
+			android:dividerHeight="0dip"
+			android:divider="@color/white">
+		</ListView>  -->
+		
+		<com.orange.common.android.widget.PullToRefreshListView
+        android:id="@+id/listView1"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:dividerHeight="0dip"
+		android:divider="@color/white"
+		android:background="@color/pull_to_refresh_border_color"
+		android:cacheColorHint="#00000000"
+		android:fadingEdge="none"
+        />
+		
+		<com.orange.common.android.widget.PullToRefreshExpandableListView
+            android:id="@+id/expandableListView"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+        	android:layout_width="fill_parent"
+        	android:dividerHeight="0dip"
+        	android:divider="@color/white"
+            android:groupIndicator="@null"
+            android:cacheColorHint="#00000000"
+			android:fadingEdge="none"
+         />
+	</LinearLayout>
+	
+	<TextView android:id="@+id/no_match_view"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"		
+		android:layout_marginTop="10dip"
+		android:gravity="center"
+		android:layout_below="@+id/button_layout"
+		android:singleLine="true"
+		android:text="暂时没有相关的比赛"
+		android:textSize="14sp"
+		android:textStyle="bold"		
+		android:textColor="@color/team_name" >
+	</TextView>
+
+
+
+
+
+</RelativeLayout>

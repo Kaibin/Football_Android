@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/white">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/index_titlebar" android:layout_width="fill_parent"
+		android:background="@drawable/top_live" android:layout_height="44dip">
+
+		<ImageView android:src="@drawable/odds_logo"
+			android:layout_width="118dip" android:layout_height="fill_parent"
+			android:layout_alignParentLeft="true" />
+		
+		<Button
+		    android:id="@+id/button_filter_score_type"
+		    android:layout_width="48dip"
+		    android:layout_height="26dip"
+		    android:layout_centerVertical="true"
+		    android:layout_toLeftOf="@+id/button_filter_company_type"
+		    android:background="@drawable/ss"
+		    android:text="一级"
+		    android:textColor="@color/white"
+		    android:textSize="12sp" />
+		
+		<Button
+		    android:id="@+id/button_filter_company_type"
+		    android:layout_width="48dip"
+		    android:layout_height="26dip"
+		    android:layout_centerVertical="true"
+		    android:layout_toLeftOf="@+id/button_filter_league"
+		    android:layout_marginLeft="1dip"
+		    android:background="@drawable/ss"
+		    android:text="内容"
+		    android:textColor="@color/white"
+		    android:textSize="12sp" />
+		
+		<Button
+		    android:id="@+id/button_filter_league"
+		    android:layout_width="48dip"
+		    android:layout_height="26dip"
+		    android:layout_centerVertical="true"
+		    android:layout_toLeftOf="@+id/button_lookback"
+		    android:layout_marginLeft="1dip"
+		    android:background="@drawable/ss"
+		    android:text="筛选"
+		    android:textColor="@color/white"
+		    android:textSize="12sp" />
+
+		<Button
+		    android:id="@+id/button_lookback"
+		    android:layout_width="48dip"
+		    android:layout_height="26dip"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginLeft="1dip"
+		    android:layout_marginRight="4dip"
+		    android:background="@drawable/ss"
+		    android:text="回查"
+		    android:textColor="@color/white"
+		    android:textSize="12sp" />
+		
+	</RelativeLayout>
+	
+    <!-- <TextView
+        android:id="@+id/no_match_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/index_titlebar"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:singleLine="false"
+        android:text="即时指数功能正在开发中，即将发布，敬请期待"
+        android:textColor="@color/team_name"
+        android:textSize="14sp"
+        android:textStyle="bold" >
+    </TextView> -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- <ExpandableListView
+            android:id="@+id/oddslist"
+            android:groupIndicator="@drawable/expandicon"
+            android:layout_width="fill_parent"
+            android:cacheColorHint="#00000000"
+			android:fadingEdge="none"
+            android:layout_height="0dip"
+            android:layout_weight="1" /> -->
+            
+            
+            <com.orange.common.android.widget.PullToRefreshExpandableListView
+            android:id="@+id/oddslist"
+            android:groupIndicator="@null"
+            android:layout_width="fill_parent"
+            android:cacheColorHint="#00000000"
+			android:fadingEdge="none"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+    </LinearLayout>
+    
+    <TextView android:id="@+id/no_real_odds_view"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"		
+		android:layout_marginTop="10dip"
+		android:gravity="center"
+		android:layout_below="@+id/score_update_current_date_layout"
+		android:singleLine="true"
+		android:text="没有符合条件的指数"
+		android:textSize="14sp"
+		android:textStyle="bold"		
+		android:textColor="@color/team_name" >
+	</TextView>
+
+</LinearLayout>
